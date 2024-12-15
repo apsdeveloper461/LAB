@@ -1,0 +1,3 @@
+﻿  LAB 11(BST).cpp
+D:\Third Smester\DSA\LAB\LAB 11(BST)\LAB 11(BST).cpp(175,1): warning C4715: 'BST::delete_Node_private': not all control paths return a value
+  LAB 11(BST).vcxproj -> D:\Third Smester\DSA\LAB\LAB 11(BST)\x64\Debug\LAB 11(BST).exe

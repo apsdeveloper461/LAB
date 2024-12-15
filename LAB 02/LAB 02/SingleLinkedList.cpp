@@ -169,6 +169,89 @@ public:
 
 		}
 	}
+
+
+	void ReverseLinkedList() {
+		Node* prev = NULL;
+		Node* current = head;
+		Node* Next = NULL;
+
+		while (current) {
+			Next = current->next;
+			current->next = prev;
+			prev = current;
+			current = Next;
+			
+		}
+		head = prev;
+
+	}
+	bool MakeCycle(int position) {
+		Node* current = head;
+		Node* newNode = NULL;
+		int c = 0;
+
+		while (current && current->next) {
+			if (c == position) {
+				newNode = current;
+			}
+			c++;
+			current = current->next;
+		}
+		if (newNode) {
+			current->next = newNode;
+			return true;
+		}
+		return false;
+	}
+	bool DetectCycle() {
+		Node* fast = head;
+		Node* slow = head;
+
+		while (fast && fast->next) {
+			fast = fast->next->next;
+			slow = slow->next;
+			if (fast == slow) {
+				return true;
+			}
+		}
+		return false;
+	}
+	void RemoveCycle() {
+		if (DetectCycle()) {
+			Node* fast = head;
+			Node* slow = head;
+
+			while (fast && fast->next) {
+				fast = fast->next->next;
+				slow = slow->next;
+				if (fast == slow) {
+					 break;
+				}
+			}
+
+			fast = head;
+
+			while (fast->next != slow->next) {
+				fast = fast->next;
+				slow = slow->next;
+			}
+			slow->next = NULL;
+
+		}
+	}
+
+	void FindMiddleNodeWithPointers() {
+		Node* fast = head;
+		Node* slow = head;
+		while (fast && fast->next) {
+			slow = slow->next;
+			fast = fast->next->next;
+		}
+
+		if(slow)
+			cout << "\nMiddle of Node is : " << slow->data  << " " << slow << endl;
+	}
 };
 
 
@@ -177,19 +260,19 @@ int main() {
 
 	SingleLinkedList l;
 	l.InsertAtBegin(12);
-	l.InsertAtBegin(13);
+	l.FindMiddleNodeWithPointers();
+	l.InsertAtEnd(13);
+	l.FindMiddleNodeWithPointers();
 	l.InsertAtEnd(15);
-	l.InsertAtBegin(1);
+	l.FindMiddleNodeWithPointers();
+	l.InsertAtEnd(1);
+	l.FindMiddleNodeWithPointers();
 	l.InsertAtEnd(-5);
+	l.FindMiddleNodeWithPointers();
 	l.InsertAtEnd(16);
+	l.FindMiddleNodeWithPointers();
 	l.Display();
-	SingleLinkedList l1;
-	l1.InsertAtBegin(12);
-	l1.InsertAtBegin(13);
-	l1.InsertAtEnd(15);
-	l1.InsertAtBegin(1);
-	l1.Display();
-	l.MergeList(l1);
+	//l.ReverseLinkedList();
 	/*int v;
 	cout << "\nEnter th value which you want to search :";
 	cin >> v;*/
@@ -201,7 +284,14 @@ int main() {
 	//l.Sorting();
 	//l.Display();
 
-	l.Display();
+	//l.Display();
+
+
+	/*l.MakeCycle(2);
+
+	cout << "Detecting a Cycle : " << l.DetectCycle();
+	l.RemoveCycle();
+	l.Display();*/
 
 	return 0;
 }

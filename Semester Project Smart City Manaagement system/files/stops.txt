@@ -1,0 +1,4 @@
+1,Masjid,East
+2,Marrige Hall,West
+3,Police Station,DownTown
+4,RoundAbout 1,East Town

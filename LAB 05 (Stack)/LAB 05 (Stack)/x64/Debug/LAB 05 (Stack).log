@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Third Smester\DSA\LAB\LAB 05 (Stack)\main.cpp(262,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Third Smester\DSA\LAB\LAB 05 (Stack)\main.cpp(274,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  LAB 05 (Stack).vcxproj -> D:\Third Smester\DSA\LAB\LAB 05 (Stack)\x64\Debug\LAB 05 (Stack).exe

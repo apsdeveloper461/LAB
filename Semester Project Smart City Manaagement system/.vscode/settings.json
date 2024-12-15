@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "xstring": "cpp",
+        "limits": "cpp",
+        "istream": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "queue": "cpp",
+        "format": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "ostream": "cpp",
+        "locale": "cpp",
+        "thread": "cpp",
+        "xlocale": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "iomanip": "cpp",
+        "xutility": "cpp"
+    }
+}
